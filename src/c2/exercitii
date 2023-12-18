@@ -1,0 +1,42 @@
+1. Care sunt avantajele principale ale utilizării Spring Framework în implementarea aplicațiilor?
+
+programare orientată pe aspecte (AOP)
+data access
+gestionarea tranzacțiilor
+autentificare și autorizare
+transmiterea de mesaje
+testare
+implementări de Model-View-Controller (MVC)
+
+2. Ce presupune mecanismul IoC?
+
+Inversion of Control (IoC) este un concept folosit în programarea orientată pe obiecte care presupune transferarea
+controlului asupra obiectelor sau anumitor porțiuni de program către un container sau framework.
+Spring Framework aplică multiple design pattern-uri cunoscute, creând obiecte (first-class objects)
+ce pot fi integrate mai departe în cadrul aplicației.
+
+Implementarea Inversion of Control se poate realiza folosind mecanisme precum:
+
+strategy pattern
+factory pattern / abstract factory pattern
+builder pattern
+Dependency Injection (DI)
+
+3. Ce este DI?
+
+Având control total asupra obiectelor manipulate, containerul de Spring IoC are datoria de a furniza tot ceea ce este necesar
+pentru crearea acestor obiecte. Mecanismul prin care se realizează aceasta este chiar Dependency Injection.
+
+4. Ce problemă adresează / rezolvă AOP?
+
+Utilizarea framework-ului Spring aduce numeroase avantaje în dezvoltarea aplicațiilor, principalele fiind:
+
+programul este mult mai ușor de menținut
+se elimină codul de tip boilerplate (i.e. cod regăsit în multe locuri care adesea are o funcționalitate minoră)
+se facilitează testarea facilă a codului
+
+Necesitatea AOP provine din nevoia de a implementa același comportament în mai multe zone ale aplicației care au un anumit aspect comun.
+Obs: Multe din funcționalitățile implementate în Spring sunt realizate prin intermediul AOP.
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myMouse"
+          class="c3.ex010203.Mouse">
+    </bean>
+    <bean id="myCat"
+          class="c3.ex010203.Cat">
+        <constructor-arg value="Felix"/>
+    </bean>
+    <bean id="myDog"
+          class="c3.ex010203.Dog">
+    </bean>
+
+</beans>
