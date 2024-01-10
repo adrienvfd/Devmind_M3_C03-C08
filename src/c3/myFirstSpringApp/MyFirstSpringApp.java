@@ -1,21 +1,20 @@
 package c3.myFirstSpringApp;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class MyFirstSpringApp{
+public class MyFirstSpringApp {
 
     public static void main(String[] args) {
 
-        // load the Spring configuration file
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("c3/myFirstSpringApp/applicationContext.xml");
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("c3/myFirstSpringApp/applicationContext.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TeacherConfiguration.class);
 
-        // retrieve bean from Spring container
-        ITeacher theTeacher = context.getBean("mathTeacher", ITeacher.class);
+        ITeacher mathTeacher = context.getBean("mathTeacher", ITeacher.class);
+        ITeacher javaTeacher = context.getBean("javaTeacher", ITeacher.class);
 
-        // call methods on the bean
-        System.out.println(theTeacher.getHomework());
+        System.out.println(mathTeacher.getHomework());
+        System.out.println(javaTeacher.getHomework());
 
-        // close the context
         context.close();
     }
 

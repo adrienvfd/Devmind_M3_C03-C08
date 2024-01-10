@@ -3,7 +3,7 @@ package c6.exercitii;
 public class AnnotationsRunner {
     public static void main(String[] args) {
         Annotations test1 = new Annotations("Adrien");
-        System.out.println("Name 1 = " +test1.getName());
+        System.out.println("Name 1 = " + test1.getName());
 
         Annotations test2 = new Annotations("Adrien");
         System.out.println("Name 2 = " + test2.getName());

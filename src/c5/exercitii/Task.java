@@ -1,5 +1,8 @@
 package c5.exercitii;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Task {
 
     private String taskName;
@@ -16,12 +19,13 @@ public class Task {
     }
 
     private Integer generateId() {
-        if(numberOfTasks == null) {
+        if (numberOfTasks == null) {
             numberOfTasks = 0;
         }
         return ++numberOfTasks;
     }
 
+    @PostConstruct
     private void init() {
         this.taskId = generateId();
         this.taskName = "Task " + taskId;
@@ -29,7 +33,7 @@ public class Task {
         System.out.println("Task with taskId = [" + taskId + "] and name = [" + taskName + "] created");
     }
 
-
+    @PreDestroy
     void destroy() {
         System.out.printf("Task with taskId = [%s] and name = [%s] destroyed. New Number of Tasks: %d%n", taskId, taskName, --numberOfTasks);
     }
