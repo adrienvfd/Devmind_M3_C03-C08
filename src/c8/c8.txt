@@ -1,0 +1,2 @@
+Course 8: remove applicationContext.xml and use annotations for previous exercises.
+--> Done in one previous commit
